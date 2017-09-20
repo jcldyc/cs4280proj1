@@ -58,7 +58,7 @@ mod {return Mod;}
 
 
 
-{L}({L}|{D}|_)+ {return Identifier;}
+{L}({L}|{D}|_)* {return Identifier;}
 {D}+ {return IntConst;}
 {D}*\.{D}* {return FloatingPoint;}
 [+-]?{D}*\.?{D}*{L}[+-]?{D} {return FloatExponent;}
