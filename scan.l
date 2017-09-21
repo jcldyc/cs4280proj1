@@ -14,7 +14,7 @@ D	[0-9]
 WHILE { return while; }
 DO { return do; }
 
-VAR {return Var;}
+VAR {return var;}
 INT {return Int;}
 REAL {return Real;}
 BOOLEAN {return Boolean;}
@@ -42,8 +42,8 @@ MOD {return Mod;}
 ">" {return GreaterThan;}
 ">=" {return GreaterThanOrEqual;}
 "<=" {return LeeserThanOrEqual;}
-"." {return Period;}
-"," {return Comma;}
+"." {return period;}
+"," {return comma;}
 
 
 
