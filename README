@@ -1,0 +1,27 @@
+To run:
+	1)Run command "make"
+	2)Run the executable with the command "./scanner"
+	3)To run a file through it, create a file (ex. text.txt)
+		i) Use command: "./scanner < text.txt"
+	4)Use "make clean" to clean up directory
+
+
+
+
+Part 1:
+Your first project is to build a scanner for a subset of Turing. You are to
+use lex (or write equivalent code) for the scanner. The productions for the
+constructs that I will have you work with are on the attached sheet. The
+tokens are:
+• The class of Identifiers: a case-sensitive sequence of letters, digits and
+underscores that start with a letter (not an underscore).
+• The class of Integers (without leading signs)
+• The class of Real Constants (both ’Int . Int’ and ’Int . Int* Exponent’)
+• Any of the Reserved Words, all of which are in lower case: var, int,
+real, boolean, record, end, bind, to, assert, begin, loop, exit,
+when, if, then, elsif, else, put, or, and, not, not=, div, mod
+• Any of the operators ; : := < > = <= >= + - * / . , ( )
+You will also need to write a tester program that reads stdin, separates out
+the tokens, and writes the token number and the string representing the
+token to stdout.
+
