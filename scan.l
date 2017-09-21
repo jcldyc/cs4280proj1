@@ -15,7 +15,7 @@ WHILE { return While; }
 DO { return Do; }
 IF {return If;}
 ELSE {return Else;}
-END {reutrn End;}
+END {return End;}
 
 VAR {return Var;}
 INT {return Int;}
