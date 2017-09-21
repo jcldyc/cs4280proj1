@@ -11,8 +11,6 @@ D	[0-9]
 [ \t]+ ; 
 
 [\n] line_num++;
-WHILE { return While; }
-DO { return Do; }
 
 VAR {return Var;}
 INT {return Int;}
@@ -28,7 +26,7 @@ EXIT {return Exit;}
 WHEN {return When;}
 THEN {return Then;}
 ELSIF {return Elsif;}
-
+ELSE {return Else;
 PUT {return Put;}
 OR {return Or;}
 AND {return And;}
@@ -37,20 +35,14 @@ NOT"=" {return NotEqual;}
 DIV {return Div;}
 MOD {return Mod;}
 
-
 ":" {return Colon;}
-":=" {return Definition;}
-"<" {return LessThan;}
+":=" {return Def;}
+"<" {return LesserThan;}
 ">" {return GreaterThan;}
-">=" {return GreaterThanEq;}
-"<=" {return LessThanEq;}
+">=" {return GreaterThanOrEqual;}
+"<=" {return LeeserThanOrEqual;}
 "." {return Period;}
 "," {return Comma;}
-
-
-
-
-
 
 {L}({L}|{D}|_)* {return Identifier;}
 {D}+ {return IntConst;}
