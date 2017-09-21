@@ -4,7 +4,7 @@ HEADERS = y.tab.h
 FLEX_FILE = scan.l
 C_FILES = test.c lex.yy.c
 OBJECT_FILES = test.o lex.yy.o
-EXECUTABLE = execute
+EXECUTABLE = scanner
 
 all: $(EXECUTABLE)
 

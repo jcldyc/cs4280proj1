@@ -11,11 +11,6 @@ D	[0-9]
 [ \t]+ ; 
 
 [\n] line_num++;
-WHILE { return While; }
-DO { return Do; }
-IF {return If;}
-ELSE {return Else;}
-END {return End;}
 
 VAR {return Var;}
 INT {return Int;}
@@ -40,7 +35,6 @@ not"=" {return NotEqual;}
 div {return Div;}
 mod {return Mod;}
 
-
 ":" {return Colon;}
 ":=" {return Definition;}
 "<" {return LessThan;}
@@ -49,11 +43,6 @@ mod {return Mod;}
 "<=" {return LessThanEq;}
 "." {return Period;}
 "," {return Comma;}
-
-
-
-
-
 
 {L}({L}|{D}|_)* {return Identifier;}
 {D}+ {return IntConst;}
@@ -74,5 +63,5 @@ mod {return Mod;}
 int yywrap (void) {return 1;}
 int yyerror (char *s)
 {
-	fprintf (stderr, "Error: %s at token %s, in line %d\n", s ,yytext, line_num);
+	fprintf (stderr, "Error: %s at token: %s, on lin: %d\n", s ,yytext, line_num);
 }

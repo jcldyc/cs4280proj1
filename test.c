@@ -3,11 +3,11 @@
 
 main ()
 {
-  int tok;
+  int token;
   extern char *yytext;
 
   while ((tok = yylex()) != 0) {
-    printf ("Token#: %d\t String: %s\n", tok, yytext);
+    printf ("The Token Number is: %d\t The String is: %s\n", token, yytext);
     }
   printf ("%d\t<eof>\n", tok);
 }
