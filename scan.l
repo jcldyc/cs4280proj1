@@ -11,10 +11,13 @@ D	[0-9]
 [ \t]+ ; 
 
 [\n] line_num++;
-WHILE { return while; }
-DO { return do; }
+WHILE { return While; }
+DO { return Do; }
+IF {return If;}
+ELSE {return Else;}
+END {reutrn End;}
 
-VAR {return var;}
+VAR {return Var;}
 INT {return Int;}
 REAL {return Real;}
 BOOLEAN {return Boolean;}
@@ -28,22 +31,24 @@ EXIT {return Exit;}
 WHEN {return When;}
 THEN {return Then;}
 ELSIF {return Elsif;}
-ELSE {return Else;
+
 PUT {return Put;}
 OR {return Or;}
 AND {return And;}
 NOT {return Not;}
-NOT"=" {return NotEqual;}
-DIV {return Div;}
-MOD {return Mod;}
+not"=" {return NotEqual;}
+div {return Div;}
+mod {return Mod;}
+
+
 ":" {return Colon;}
-":=" {return Def;}
-"<" {return LesserThan;}
+":=" {return Definition;}
+"<" {return LessThan;}
 ">" {return GreaterThan;}
-">=" {return GreaterThanOrEqual;}
-"<=" {return LeeserThanOrEqual;}
-"." {return period;}
-"," {return comma;}
+">=" {return GreaterThanEq;}
+"<=" {return LessThanEq;}
+"." {return Period;}
+"," {return Comma;}
 
 
 
