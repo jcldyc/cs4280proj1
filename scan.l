@@ -1,29 +1,27 @@
 %{
 	#include <stdio.h>
 	#include "y.tab.h"
-	int line_no = 0;
+	int line_num = 0;
 %}
 L	[A-Za-z]
 D	[0-9]
 %%
-[ \t]+ ; /* skip white space */
-[\n] line_no++; /* count lines */
-while { return While; }
-do { return Do; }
 
-
-
-
-
-
-
+/* checks for a white space here */
+[ \t]+ ; 
+/* This increments the the line number */
+[\n] line_num++;
+WHILE { return While; }
+DO { return Do; }
+IF {return If;}
+ELSE {return Else;}
+END {reutrn End;}
 
 var {return Var;}
 int {return Int;}
 real {return Real;}
 boolean {return Boolean;}
 record {return Record;}
-end {return End;}
 bind {return Bind;}
 to {return To;}
 assert {return Assert;}
@@ -31,10 +29,9 @@ begin {return Begin;}
 loop {return Loop;}
 exit {return Exit;}
 when {return When;}
-if {return If;}
 then {return Then;}
 elsif {return Elsif;}
-else {return Else;}
+
 put {return Put;}
 or {return Or;}
 and {return And;}
@@ -71,11 +68,11 @@ mod {return Mod;}
 ";" { return Semicolon; }
 "(" { return LPar; }
 ")" { return RPar; }
-. { yyerror ("Unrecognized Character"); }
+. { yyerror ("Evil Character!"); }
 
 %%
 int yywrap (void) {return 1;}
 int yyerror (char *s)
 {
-	fprintf (stderr, "%s in line %d, token %s\n", s, line_no, yytext);
+	fprintf (stderr, "Error: %s at token %s, in line %d\n", s ,yytext, line_num);
 }
