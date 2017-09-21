@@ -36,10 +36,10 @@ int yylex(void);
 #define Mod 56
 #define Colon 61
 #define Definition 62
-#define LessThan 63
+#define LesserThan 63
 #define GreaterThan 64
-#define LessThanEq 65
-#define GreaterThanEq 66
+#define LesserThanOrEqual 65
+#define GreaterThanOrEqual 66
 #define Period 67
 #define Comma 68
 #define Assign 71
@@ -48,5 +48,5 @@ int yylex(void);
 #define Star 74
 #define Slash 75
 #define Semicolon 76
-#define LPar 77
-#define RPar 78
+#define LeftPar 77
+#define RightPar 78
