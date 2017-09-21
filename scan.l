@@ -36,16 +36,16 @@ PUT {return Put;}
 OR {return Or;}
 AND {return And;}
 NOT {return Not;}
-not"=" {return NotEqual;}
-div {return Div;}
-mod {return Mod;}
+NOT"=" {return NotEqual;}
+DIV {return Div;}
+MOD {return Mod;}
 
 ":" {return Colon;}
 ":=" {return Definition;}
-"<" {return LessThan;}
+"<" {return LesserThan;}
 ">" {return GreaterThan;}
-">=" {return GreaterThanEq;}
-"<=" {return LessThanEq;}
+">=" {return GreaterThanOrEqual;}
+"<=" {return LesserThanOrEqual;}
 "." {return Period;}
 "," {return Comma;}
 
@@ -60,8 +60,8 @@ mod {return Mod;}
 "*" { return Star; }
 "/" { return Slash; }
 ";" { return Semicolon; }
-"(" { return LPar; }
-")" { return RPar; }
+"(" { return LeftPar; }
+")" { return RightPar; }
 . { yyerror ("Evil Character!"); }
 
 %%
