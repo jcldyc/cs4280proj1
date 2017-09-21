@@ -11,6 +11,8 @@ D	[0-9]
 [ \t]+ ; 
 
 [\n] line_num++;
+WHILE { return while; }
+DO { return do; }
 
 VAR {return Var;}
 INT {return Int;}
@@ -34,7 +36,6 @@ NOT {return Not;}
 NOT"=" {return NotEqual;}
 DIV {return Div;}
 MOD {return Mod;}
-
 ":" {return Colon;}
 ":=" {return Def;}
 "<" {return LesserThan;}
@@ -43,6 +44,11 @@ MOD {return Mod;}
 "<=" {return LeeserThanOrEqual;}
 "." {return Period;}
 "," {return Comma;}
+
+
+
+
+
 
 {L}({L}|{D}|_)* {return Identifier;}
 {D}+ {return IntConst;}
