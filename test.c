@@ -6,8 +6,8 @@ main ()
   int token;
   extern char *yytext;
 
-  while ((tok = yylex()) != 0) {
+  while ((token = yylex()) != 0) {
     printf ("The Token Number is: %d\t The String is: %s\n", token, yytext);
     }
-  printf ("%d\t<eof>\n", tok);
+  printf ("%d\t <eof>\n", token);
 }
