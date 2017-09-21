@@ -1,7 +1,6 @@
 extern char *yytext;
 int yylex(void);
 
-
 #define Identifier 1
 #define IntConst 2
 #define RealConst 3
