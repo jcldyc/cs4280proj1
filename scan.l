@@ -17,28 +17,28 @@ IF {return If;}
 ELSE {return Else;}
 END {reutrn End;}
 
-var {return Var;}
-int {return Int;}
-real {return Real;}
-boolean {return Boolean;}
-record {return Record;}
-bind {return Bind;}
-to {return To;}
-assert {return Assert;}
-begin {return Begin;}
-loop {return Loop;}
-exit {return Exit;}
-when {return When;}
-then {return Then;}
-elsif {return Elsif;}
+VAR {return Var;}
+INT {return Int;}
+REAL {return Real;}
+BOOLEAN {return Boolean;}
+RECORD {return Record;}
+BIND {return Bind;}
+TO {return To;}
+ASSERT {return Assert;}
+BEGIN {return Begin;}
+LOOP {return Loop;}
+EXIT {return Exit;}
+WHEN {return When;}
+THEN {return Then;}
+ELSIF {return Elsif;}
 
-put {return Put;}
-or {return Or;}
-and {return And;}
-not {return Not;}
-not"=" {return NotEqual;}
-div {return Div;}
-mod {return Mod;}
+PUT {return Put;}
+OR {return Or;}
+AND {return And;}
+NOT {return Not;}
+NOT"=" {return NotEqual;}
+DIV {return Div;}
+MOD {return Mod;}
 
 
 ":" {return Colon;}
